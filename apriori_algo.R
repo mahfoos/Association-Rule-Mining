@@ -10,8 +10,10 @@ library(arulesViz)
 library(RColorBrewer)
 
 data("Groceries")
+print(Groceries)
 
 rules <- apriori(Groceries, parameter = list(supp = 0.01, conf = 0.2))
+rules
 
 inspect(rules[1:10])
 
